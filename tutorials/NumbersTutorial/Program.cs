@@ -3,7 +3,9 @@
 //=======================================================
 // HelloWorld();
 // WorkWithIntegers();
-OrderPrecedence();
+// OrderPrecedence();
+// WorkWithDoubles();
+WorkWithDecimals();
 
 //=======================================================
 //              Section 1: Hello World 
@@ -21,7 +23,7 @@ void HelloWorld()
     Console.WriteLine($"Hello {aFriend}");
 
     ////////////// Section 2 //////////////////////
-    // Calling Variables
+    // Declaratives and Calling
     string firstFriend = "Joe";
     string secondFriend = "Brad";
 
@@ -52,9 +54,7 @@ void HelloWorld()
     sayHello = sayHello.Replace("Hello", "Greetings");
     Console.WriteLine(sayHello);
 
-
     // Contains
-    // Console.Clear();
     string songLyrics = "You say goodbye, and I say hello";
     Console.WriteLine(songLyrics.Contains("goodbye"));
     Console.WriteLine(songLyrics.Contains("greetings"));
@@ -74,10 +74,87 @@ void WorkWithIntegers()
 
 ////////////////////// Section 2 //////////////////////
 void OrderPrecedence()
+
 {
     int a = 5;
     int b = 4;
     int c = 2;
     int d = a + b * c;
-    Console.WriteLine(c);
+    Console.WriteLine("d = " + d);
+
+    int e = (a + b) - 6 * c + (12 * 4) / 3 + 12;
+    Console.WriteLine("e = " + e);
+
+    int f = 3;
+    int g = 2;
+    int h = f / g;
+    Console.WriteLine("h = " + h);
+    Console.WriteLine("Here it is important to note that 'h' is actually 2/3.");
+    Console.WriteLine("Integer Math Returns Integers. Always.");
+    Console.WriteLine("");
+    Console.WriteLine("");
+
+    int a2 = 7;
+    int b2 = 4;
+    int c2 = 3;
+    int d2 = (a2 + b2) / c2;
+    int e2 = (a2 +b2) % c2;
+    Console.WriteLine($"Quotent: {d2}");
+    Console.WriteLine($"Remainder: {e2}");
+ 
+
+    int max = int.MaxValue;
+    int min = int.MinValue;
+    Console.WriteLine($"The range of integers is {min} to {max}");
+
+    int what = max + 3;
+    Console.WriteLine($"Example Overflow: {what}");
+}
+
+////////////////////// Section 2 //////////////////////
+void WorkWithDoubles()
+{
+    double a = 5;
+    double b = 4;
+    double c = 2;
+    double d = (a + b) / c;
+    Console.WriteLine($"Double Value for d: {d}");
+    
+    double a2 = 19;
+    double b2 = 23;
+    double c2 = 8;
+    double d2 = (a2 + b2) / c2;
+    Console.WriteLine($"Double Value for d2: {d2}");
+    
+    double max = double.MaxValue;
+    double min = double.MinValue;
+
+    Console.WriteLine($" he range of double is {min} to {max}");
+
+    double third = 1.0 / 3.0;
+    Console.WriteLine($"1.0/3.0 as doubles is:  {third}");
+}
+
+////////////////////// Section 2 //////////////////////
+void WorkWithDecimals()
+{
+
+    decimal min = decimal.MinValue;
+    decimal max = decimal.MaxValue;
+    Console.WriteLine($"The range of the decimal type is {min} to {max}"); 
+
+    Console.WriteLine($"Integer Value of 1/3 = {(1/3)}");
+    
+    double a = 1.0;
+    double b = 3.0;
+    Console.WriteLine($"Double Value of 1/3 = {(a / b)}");
+
+    decimal c = 1.0M;
+    decimal d = 3.0M;
+    Console.WriteLine($"Decimal Value of 1/3 = {(c /d)}");
+
+    double rad = 2.50;
+    double area = 2 * Math.PI * (rad * rad);
+    Console.WriteLine($"The are of a circle with a radius of {rad}cm will have an area of {area}cm^2");
+
 }
