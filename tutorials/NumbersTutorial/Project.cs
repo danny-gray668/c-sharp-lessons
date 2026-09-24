@@ -166,6 +166,14 @@ void WorkWithDecimals()
 ////////////////////// Section 1 //////////////////////
 void TupleTraining()
 {
-    Console.WriteLine($"Tuple Training Ready to Begin!");
+    var pt = (X: 1, Y: 2); 
+    var slope = (double)pt.Y / (double)pt.X;
+    Console.WriteLine($"The slope of a line from the origin to point {pt} has a slope of {slope}.");
 
+    pt.X = pt.X + 5;
+    Console.WriteLine($"The point is now at {pt}.");
+
+    var deltaY = 8;
+    var pt2 = pt with { Y = (pt.Y + deltaY)};
+    Console.WriteLine($"The point 'pt2' is at {pt2}.");
 }
